@@ -1,6 +1,6 @@
 # 📣 Tracker card
 
-A card to track updates for [custom cards](https://github.com/custom-cards) and [custom components](https://github.com/custom-components). It uses a [custom_component](https://github.com/custom-components/custom_updater) to sync versions and allows for **updates of cards and components from the UI**. ♠️♣️♥️♦️
+A card to track updates for [custom cards](https://github.com/custom-cards) and [custom components](https://github.com/custom-components). It uses the [custom_updater]](https://github.com/custom-components/custom_updater) component to sync versions and allows for **updates of cards and components from the UI**. ♠️♣️♥️♦️
 
 ![tracker-card](https://user-images.githubusercontent.com/7738048/42875398-50ee1622-8a8c-11e8-97ed-ea6de6843504.png)
 
