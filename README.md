@@ -1,6 +1,6 @@
 # 📣 Tracker card
 
-A card to track updates for [custom cards](https://github.com/custom-components/custom_cards) and [custom components](https://github.com/custom-components/custom_components). It uses custom_components to sync versions and allows for **automatic updates of cards**. ♠️♣️♥️♦️
+A card to track updates for [custom cards](https://github.com/custom-cards) and [custom components](https://github.com/custom-components). It uses the [custom_updater]](https://github.com/custom-components/custom_updater) component to sync versions and allows for **updates of cards and components from the UI**. ♠️♣️♥️♦️
 
 ![tracker-card](https://user-images.githubusercontent.com/7738048/42875398-50ee1622-8a8c-11e8-97ed-ea6de6843504.png)
 
@@ -9,7 +9,7 @@ A card to track updates for [custom cards](https://github.com/custom-components/
 | Name | Type | Default | Description
 | ---- | ---- | ------- | -----------
 | type | string | **Required** | `custom:tracker-card`
-| entity | string | **Required** | The sensor to use for tracking `sensor.custom_card_tracker`
+| trackers | list | **Required** | A list sensors to use for tracking, `sensor.custom_card_tracker` and/or `sensor.custom_component_tracker`
 | title | string | 📣 Updates | Name to display on card
 
 ## Installation
