@@ -119,14 +119,14 @@ class TrackerCard extends HTMLElement {
           card_content += updated_content;
         }
         // attach handlers only once
-        if (!this.handlers[domain]) {
+        if (!this.handlers['custom_updater']) {
           card.querySelector('#update').addEventListener('click', event => {
-            this.myhass.callService(domain, 'update_all', {});
+            this.myhass.callService('custom_updater', 'update_all', {});
           });
           card.querySelector('#check').addEventListener('click', event => {
-            this.myhass.callService(domain, 'check_all', {});
+            this.myhass.callService('custom_updater', 'check_all', {});
           });
-          this.handlers[domain] = true;
+          this.handlers['custom_updater'] = true;
         }
         root.lastChild.hass = hass;
       }
