@@ -77,7 +77,7 @@ class TrackerCard extends HTMLElement {
   }
 
   _filterCards(attributes) {
-    return Object.entries(attributes).filter(elem => (elem[0] != "friendly_name" && elem[0] != "homebridge_hidden" && elem[0] != "domain" && elem[0] != "repo"));
+    return Object.entries(attributes).filter(elem => (elem[0] != "friendly_name" && elem[0] != "homebridge_hidden" && elem[0] != "domain" && elem[0] != "repo" && elem[0] != "hidden"));
   }
 
   set hass(hass) {
@@ -119,14 +119,14 @@ class TrackerCard extends HTMLElement {
           card_content += updated_content;
         }
         // attach handlers only once
-        if (!this.handlers[domain]) {
+        if (!this.handlers['custom_updater']) {
           card.querySelector('#update').addEventListener('click', event => {
-            this.myhass.callService(domain, 'update_all', {});
+            this.myhass.callService('custom_updater', 'update_all', {});
           });
           card.querySelector('#check').addEventListener('click', event => {
-            this.myhass.callService(domain, 'check_all', {});
+            this.myhass.callService('custom_updater', 'check_all', {});
           });
-          this.handlers[domain] = true;
+          this.handlers['custom_updater'] = true;
         }
         root.lastChild.hass = hass;
       }
