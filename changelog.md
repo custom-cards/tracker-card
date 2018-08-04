@@ -1,5 +1,6 @@
 ## 0.1.4
-Set a static domain for services
+- Set a static domain for services
+- Added exception for `hidden`
 
 ## 0.1.3
 - Added support for the new `custom_updater`
