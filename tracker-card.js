@@ -56,6 +56,7 @@ class TrackerCard extends HTMLElement {
           }
           tbody td.remote a {
             font-weight: bold;
+            color: red;
           }
           tbody td.separator {
             font-weight: bold;
@@ -114,7 +115,7 @@ class TrackerCard extends HTMLElement {
                     `:(elem[1].local?elem[1].local:'n/a')}
                     </td>
                   <td class='remote'>
-                    ${elem[1].has_update?`
+                    ${elem[1].has_update && !elem[1].not_local?`
                     <a href="${elem[1].change_log?elem[1].change_log:'#'}" target='_blank'>${elem[1].remote?elem[1].remote:'n/a'}</a>
                     `:(elem[1].remote?elem[1].remote:'n/a')}
                     </td>
