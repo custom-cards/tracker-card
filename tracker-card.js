@@ -138,6 +138,7 @@ class TrackerCard extends HTMLElement {
           const element = String(window.location.href).split('#install-')[1]
           this.myhass.callService('custom_updater', 'install', {"element": element});
           location.href = '#'
+          window.alert(element+' are now installed, make sure you read the docs on how to set it up.')
           
         } 
         root.lastChild.hass = hass;
