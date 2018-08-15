@@ -52,7 +52,7 @@ class TrackerCard extends HTMLElement {
             font-weight: normal;
           }
           td a {
-            color: red;
+            color: var(--primary-text-color);
             font-weight: bold;
           }
           tbody td.separator {
@@ -104,10 +104,13 @@ class TrackerCard extends HTMLElement {
         if (list !== undefined && list.length > 0) {
           const updated_content = `
             ${list.map(elem => `
-
                 <tr>
                   <td class='name'><a href="${elem[1].repo?elem[1].repo:'#'}" target='_blank'>${elem[0]}</a></td>
-                  <td>${elem[1].local?elem[1].local:'n/a'}</td>
+                  <td>
+                    ${elem[1].not_local?`
+                    <a href="#install-${elem[0]}" id='install'>Install</a>
+                    `:(elem[1].local?elem[1].local:'n/a')}
+                    </td>
                   <td>
                     ${elem[1].has_update?`
                     <a href="${elem[1].change_log?elem[1].change_log:'#'}" target='_blank'>${elem[1].remote?elem[1].remote:'n/a'}</a>
@@ -128,6 +131,12 @@ class TrackerCard extends HTMLElement {
           });
           this.handlers['custom_updater'] = true;
         }
+        if(window.location.href.indexOf('#install') > 0){
+          const element = String(window.location.href).split('#install-')[1]
+          this.myhass.callService('custom_updater', 'install', {"element": element});
+          location.href = '#'
+          
+        } 
         root.lastChild.hass = hass;
       }
     });

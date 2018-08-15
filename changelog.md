@@ -1,3 +1,6 @@
+## 0.2.0
+- Added install logic
+
 ## 0.1.4
 - Set a static domain for services
 - Added exception for `hidden`
