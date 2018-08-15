@@ -46,13 +46,15 @@ class TrackerCard extends HTMLElement {
           paper-button {
             float: right;
           }
-          tbody td.name a {
-            color: var(--primary-text-color);
-            text-decoration-line: none;
-            font-weight: normal;
-          }
           td a {
             color: var(--primary-text-color);
+            font-weight: bold;
+            text-decoration-line: none;
+          }
+          tbody td.name a {
+            font-weight: normal;
+          }
+          tbody td.remote a {
             font-weight: bold;
           }
           tbody td.separator {
@@ -106,12 +108,12 @@ class TrackerCard extends HTMLElement {
             ${list.map(elem => `
                 <tr>
                   <td class='name'><a href="${elem[1].repo?elem[1].repo:'#'}" target='_blank'>${elem[0]}</a></td>
-                  <td>
+                  <td class='local'>
                     ${elem[1].not_local?`
                     <a href="#install-${elem[0]}" id='install'>Install</a>
                     `:(elem[1].local?elem[1].local:'n/a')}
                     </td>
-                  <td>
+                  <td class='remote'>
                     ${elem[1].has_update?`
                     <a href="${elem[1].change_log?elem[1].change_log:'#'}" target='_blank'>${elem[1].remote?elem[1].remote:'n/a'}</a>
                     `:(elem[1].remote?elem[1].remote:'n/a')}
