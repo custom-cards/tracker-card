@@ -14,11 +14,13 @@ A card to track updates for [custom cards](https://github.com/custom-cards) and 
 
 ## Installation
 
+0. Before you install `tracker-card` you need to complete the installtion steps for [custom_updater](https://github.com/custom-components/custom_updater)
+
 1. Install the `tracker-card` component by copying `tracker-card.js` to `<config directory>/www/tracker-card.js`
 
 Example:
 ```bash
-wget https://raw.githubusercontent.com/ciotlosm/custom-lovelace/master/tracker-card/tracker-card.js
+wget https://raw.githubusercontent.com/custom-cards/tracker-card/master/tracker-card.js
 mv tracker-card.js /config/www/
 ```
 
