@@ -1,6 +1,9 @@
 ## 0.2.0
 - Added install logic
 
+## 0.1.5
+- Added exception for has_update
+
 ## 0.1.4
 - Set a static domain for services
 - Added exception for `hidden`
