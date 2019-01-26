@@ -1,10 +1,10 @@
 ## 0.1.6
 - Added custom string translation for:
-  name_text: Name (default)
+  ```name_text: Name (default)
   current_text: Current (default)
   available_text: Available (default)
   update_all_text: Update all (default)
-  check_text: Check (default)
+  check_text: Check (default)```
 
 ## 0.1.5
 - Added exception for has_update
