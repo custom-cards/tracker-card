@@ -11,6 +11,11 @@ A card to track updates for [custom cards](https://github.com/custom-cards) and 
 | type | string | **Required** | `custom:tracker-card`
 | trackers | list | **Required** | A list sensors to use for tracking, `sensor.custom_card_tracker` and/or `sensor.custom_component_tracker`
 | title | string | 📣 Updates | Name to display on card
+| name_text | string | Name | translation for Name
+| current_text | string | Current | translation for Current
+| available_text | string | Available | translation for Available
+| check_text | string | Check | translation for Check
+| update_all_text | string | Update All | translation for Update All
 
 ## Installation
 
