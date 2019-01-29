@@ -19,6 +19,21 @@ class TrackerCard extends HTMLElement {
     } else {
       cardConfig.title = '📣 ' + cardConfig.title;
     }
+	if (!cardConfig.name_text || cardConfig.name_text == "") {
+      cardConfig.name_text = 'Name';
+    }
+	if (!cardConfig.current_text || cardConfig.current_text == "") {
+      cardConfig.current_text = 'Current';
+    }
+	if (!cardConfig.available_text || cardConfig.available_text == "") {
+      cardConfig.available_text = 'Available';
+    }
+	if (!cardConfig.update_all_text || cardConfig.update_all_text == "") {
+      cardConfig.update_all_text = 'Update All';
+    }
+	if (!cardConfig.check_text || cardConfig.check_text == "") {
+      cardConfig.check_text = 'Check';
+    }
     const card = document.createElement('ha-card');
     const content = document.createElement('div');
     const style = document.createElement('style');
@@ -65,8 +80,8 @@ class TrackerCard extends HTMLElement {
       <div id='content'>
       </div>
       <div class='button'>
-        <paper-button raised id='update'>Update All</paper-button>
-        <paper-button raised id='check'>Check</paper-button>
+        <paper-button raised id='update'>` + cardConfig.update_all_text + `</paper-button>
+        <paper-button raised id='check'>` + cardConfig.check_text + `</paper-button>
       </div>
     `;
     card.header = cardConfig.title
@@ -87,9 +102,10 @@ class TrackerCard extends HTMLElement {
     this.myhass = hass;
     this.handlers = this.handlers || [];
     let card_content = '';
+	
     card_content += `
       <table>
-      <thead><tr><th>Name</th><th>Current</th><th>Available</th></tr></thead>
+      <thead><tr><th>` + config.name_text + `</th><th>` + config.current_text + `</th><th>` + config.available_text + `</th></tr></thead>
       <tbody>
     `;
     config.trackers.forEach(tracker => {
