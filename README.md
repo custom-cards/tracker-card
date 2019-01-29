@@ -32,7 +32,15 @@ resources:
     type: js
 ```
 
-3. Add a custom card in your `ui-lovelace.yaml`
+3. Add versioning to your existing cards inside you `ui-lovelace.yaml` 
+
+```yaml
+resources:
+  - url: /local/gauge-card.js?v=0
+    type: js
+```
+
+4. Add a custom card in your `ui-lovelace.yaml`
 
 ```yaml
 - type: custom:tracker-card
