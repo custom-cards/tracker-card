@@ -1,4 +1,4 @@
-## 0.1.6
+## 0.2.0
 - Added custom string translation for:
   ```
   name_text: Name (default)
