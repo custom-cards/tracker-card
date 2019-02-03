@@ -17,7 +17,7 @@ class TrackerCard extends HTMLElement {
     if (!cardConfig.title) {
       cardConfig.title = '📣 Updates';
     } else {
-      cardConfig.title = '📣 ' + cardConfig.title;
+      cardConfig.title = cardConfig.title;
     }
 	if (!cardConfig.name_text || cardConfig.name_text == "") {
       cardConfig.name_text = 'Name';

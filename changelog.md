@@ -1,3 +1,7 @@
+## 0.3.0
+
+- Don't show icon if custom name is set.
+
 ## 0.2.0
 - Added custom string translation for:
   ```
