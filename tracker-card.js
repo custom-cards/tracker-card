@@ -32,7 +32,7 @@ class TrackerCard extends HTMLElement {
       cardConfig.update_all_text = 'Update All';
     }
 	if (!cardConfig.check_text || cardConfig.check_text == "") {
-      cardConfig.check_text = 'Check for updates';
+      cardConfig.check_text = 'Check';
     }
     const card = document.createElement('ha-card');
     const content = document.createElement('div');
