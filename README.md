@@ -33,7 +33,7 @@ mv tracker-card.js /config/www/
 
 ```yaml
 resources:
-  - url: /local/tracker-card.js?v=0
+  - url: /customcards/tracker-card.js?v=0
     type: js
 ```
 
@@ -41,7 +41,7 @@ resources:
 
 ```yaml
 resources:
-  - url: /local/gauge-card.js?v=0
+  - url: /customcards/gauge-card.js?v=0
     type: js
 ```
 
