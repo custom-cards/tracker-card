@@ -29,19 +29,19 @@ wget https://raw.githubusercontent.com/custom-cards/tracker-card/master/tracker-
 mv tracker-card.js /config/www/
 ```
 
-2. Link `tracker-card` inside you `ui-lovelace.yaml` 
+2. Link `tracker-card` inside your `ui-lovelace.yaml`
 
 ```yaml
 resources:
-  - url: /local/tracker-card.js?v=0
+  - url: /customcards/tracker-card.js?v=0
     type: js
 ```
 
-3. Add versioning to your existing cards inside you `ui-lovelace.yaml` 
+3. Add versioning to your existing cards inside your `ui-lovelace.yaml`
 
 ```yaml
 resources:
-  - url: /local/gauge-card.js?v=0
+  - url: /customcards/gauge-card.js?v=0
     type: js
 ```
 
