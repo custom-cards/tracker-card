@@ -26,7 +26,7 @@ _Before you install this you need to complete the installation steps for [custom
 ```yaml
 resources:
   - url: /customcards/github/custom-components/tracker-card.js?track=true
-    type: js
+    type: module
 ```
 
 2. Run the service `custom_updater.check_all` or restart Home Assistant.
