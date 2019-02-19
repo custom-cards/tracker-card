@@ -1,3 +1,14 @@
+## 1.0.0
+
+- Added (limited) UI editor inspiration from [roku-card-editor.js](https://github.com/custom-cards/roku-card/blob/master/roku-card-editor.js) by [@iantrich](https://github.com/iantrich)
+- type changed from `js` to `module`
+
+```yaml
+resources:
+  - url: /customcards/github/custom-components/tracker-card.js?track=true
+    type: module
+```
+
 ## 0.3.1 - 0.3.2
 
 - Fix buttons after 0.88.x

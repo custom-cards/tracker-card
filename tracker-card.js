@@ -1,5 +1,10 @@
 class TrackerCard extends HTMLElement {
 
+  static async getConfigElement() {
+    await import("./tracker-card-editor.js");
+    return document.createElement("tracker-card-editor");
+  }
+
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -7,7 +12,7 @@ class TrackerCard extends HTMLElement {
 
   setConfig(config) {
     if (!config.trackers || !Array.isArray(config.trackers)) {
-      throw new Error('Please at least one tracker');
+      config.trackers = ['sensor.custom_card_tracker','sensor.custom_component_tracker'];
     }
 
     const root = this.shadowRoot;
