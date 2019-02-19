@@ -17,44 +17,31 @@ A card to track updates for [custom cards](https://github.com/custom-cards) and 
 | check_text | string | Check | translation for Check
 | update_all_text | string | Update All | translation for Update All
 
-## Installation
+## Installation and tracking with `custom_updater`
 
-Note: Before you install `tracker-card` you need to complete the installation steps for [custom_updater](https://github.com/custom-components/custom_updater)
+_Before you install this you need to complete the installation steps for [custom_updater](https://github.com/custom-components/custom_updater)_
 
-1. Install the `tracker-card` component by copying `tracker-card.js` to `<config directory>/www/tracker-card.js`
-
-Example:
-```bash
-wget https://raw.githubusercontent.com/custom-cards/tracker-card/master/tracker-card.js
-mv tracker-card.js /config/www/
-```
-
-2. Link `tracker-card` inside your `ui-lovelace.yaml`
+1. Configure Lovelace to load the card:.
 
 ```yaml
 resources:
-  - url: /customcards/tracker-card.js?v=0
+  - url: /customcards/github/custom-components/tracker-card.js?track=true
     type: js
 ```
 
-3. Add versioning to your existing cards inside your `ui-lovelace.yaml`
+2. Run the service `custom_updater.check_all` or restart Home Assistant.
+3. Refresh the front end.
+
+4. Add this in your Lovelace configuration.
 
 ```yaml
-resources:
-  - url: /customcards/gauge-card.js?v=0
-    type: js
-```
-
-4. Add a custom card in your `ui-lovelace.yaml`
-
-```yaml
-- type: custom:tracker-card
-  title:
-  trackers:
-    - sensor.custom_card_tracker
-    - sensor.custom_component_tracker
+type: custom:tracker-card
+trackers:
+  - sensor.custom_card_tracker
+  - sensor.custom_component_tracker
 ```
 
 ## Credits
+
 - [ciotlosm](https://github.com/ciotlosm)
 - [ludeeus](https://github.com/ludeeus)
