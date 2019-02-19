@@ -25,7 +25,7 @@ _Before you install this you need to complete the installation steps for [custom
 
 ```yaml
 resources:
-  - url: /customcards/github/custom-components/tracker-card.js?track=true
+  - url: /customcards/github/custom-cards/tracker-card.js?track=true
     type: module
 ```
 
