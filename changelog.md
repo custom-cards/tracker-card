@@ -9,6 +9,8 @@ resources:
     type: module
 ```
 
+- `sensor.custom_card_tracker` and `sensor.custom_component_tracker` are both enabled by default.
+
 ## 0.3.1 - 0.3.2
 
 - Fix buttons after 0.88.x

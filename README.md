@@ -36,9 +36,6 @@ resources:
 
 ```yaml
 type: custom:tracker-card
-trackers:
-  - sensor.custom_card_tracker
-  - sensor.custom_component_tracker
 ```
 
 ## Credits
