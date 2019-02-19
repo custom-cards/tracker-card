@@ -1,8 +1,3 @@
 {
-  "tracker-card": {
-    "changelog": "https://github.com/custom-cards/tracker-card",
-    "remote_location": "https://raw.githubusercontent.com/custom-cards/tracker-card/master/tracker-card.js",
-    "version": "0.3.2b0",
-    "visit_repo": "https://github.com/custom-cards/tracker-card"
-  }
+  "tracker-card": {}
 }
