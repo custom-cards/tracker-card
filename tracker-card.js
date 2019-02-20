@@ -66,9 +66,9 @@ class TrackerCard extends HTMLElement {
           .button {
             overflow: auto;
             padding: 16px;
+            text-align: right;
           }
           mwc-button {
-            float: right;
             margin-right: 16px;
           }
           tbody td.name a {
@@ -100,8 +100,8 @@ class TrackerCard extends HTMLElement {
       <div id='content'>
       </div>
       <div class='button'>
-        <mwc-button raised id='update'>` + cardConfig.update_all_text + `</mwc-button>
         <mwc-button raised id='check'>` + cardConfig.check_text + `</mwc-button>
+        <mwc-button raised id='update'>` + cardConfig.update_all_text + `</mwc-button>
       </div>
     `;
     card.header = cardConfig.title
