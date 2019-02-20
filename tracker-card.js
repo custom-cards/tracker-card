@@ -66,11 +66,10 @@ class TrackerCard extends HTMLElement {
           .button {
             overflow: auto;
             padding: 16px;
-            text-align: right
+            text-align: right;
           }
-          paper-button {
-            box-shadow: none;
-            font-weight: 500;
+          mwc-button {
+            margin-right: 16px;
           }
           tbody td.name a {
             color: var(--primary-text-color);
@@ -101,8 +100,8 @@ class TrackerCard extends HTMLElement {
       <div id='content'>
       </div>
       <div class='button'>
-        <paper-button raised id='check'>` + cardConfig.check_text + `</paper-button>
-        <paper-button raised id='update'>` + cardConfig.update_all_text + `</paper-button>
+        <mwc-button raised id='check'>` + cardConfig.check_text + `</mwc-button>
+        <mwc-button raised id='update'>` + cardConfig.update_all_text + `</mwc-button>
       </div>
     `;
     card.header = cardConfig.title
