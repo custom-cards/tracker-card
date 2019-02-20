@@ -1,3 +1,9 @@
+## 1.1.0
+
+- Added support to update single element
+
+**NB! Clicking the red version number when there is an update will now install that update instead of taking you to the release notes, for release notes click the name of that element.**
+
 ## 1.0.0
 
 - Added (limited) UI editor inspiration from [roku-card-editor.js](https://github.com/custom-cards/roku-card/blob/master/roku-card-editor.js) by [@iantrich](https://github.com/iantrich)
