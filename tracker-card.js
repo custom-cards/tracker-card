@@ -210,11 +210,6 @@ class TrackerCard extends HTMLElement {
   }
 }
 
-if (!customElements.get("paper-input")) {
-  console.log("imported", "paper-input");
-  import("https://unpkg.com/@polymer/paper-input/paper-input.js?module");
-}
-
 const fireEvent = (node, type, detail, options) => {
   options = options || {};
   detail = detail === null || detail === undefined ? {} : detail;

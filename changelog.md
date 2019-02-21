@@ -1,3 +1,7 @@
+## 1.2.1
+
+- Remove paper-input import
+
 ## 1.2.0
 
 - Merge files to solve FF import error.
