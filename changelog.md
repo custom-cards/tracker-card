@@ -1,3 +1,7 @@
+## 1.2.2
+
+- Remove export
+
 ## 1.2.1
 
 - Remove paper-input import

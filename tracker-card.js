@@ -228,7 +228,7 @@ const LitElement = Object.getPrototypeOf(
 );
 const html = LitElement.prototype.html;
 
-export class TrackerCardEditor extends LitElement {
+class TrackerCardEditor extends LitElement {
   setConfig(config) {
     this._config = config;
   }
