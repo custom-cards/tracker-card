@@ -257,6 +257,9 @@ class TrackerCardEditor extends LitElement {
             @value-changed="${this._valueChanged}"
           ></paper-input>
         </div>
+        <div class="side-by-side">
+          <a href ="https://github.com/custom-components/custom_updater/issues/new?template=issue.md" target="_blank"><mwc-button style="float: right;" title="Open an issue @ GitHub">Open an issue</mwc-button></a>
+        </div>
         <div>For more advanced configuration use the yaml editor</div>
       </div>
     `;

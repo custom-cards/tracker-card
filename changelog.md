@@ -1,3 +1,7 @@
+## 1.2.3
+
+- Adds issue button to card-editor
+
 ## 1.2.2
 
 - Remove export
