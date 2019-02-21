@@ -1,3 +1,7 @@
+## 1.2.0
+
+- Merge files to solve FF import error.
+
 ## 1.1.1
 
 - Styling changes [#44](https://github.com/custom-cards/tracker-card/pull/44) [(@bbbenji)](https://github.com/bbbenji)
