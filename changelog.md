@@ -1,3 +1,7 @@
+## 1.2.5
+
+- Fix eventlisteners for "new" updates
+
 ## 1.2.4
 
 - Better handling of adding eventlisteners
