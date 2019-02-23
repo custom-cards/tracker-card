@@ -1,3 +1,7 @@
+## 1.2.4
+
+- Better handling of adding eventlisteners
+
 ## 1.2.3
 
 - Adds issue button to card-editor

@@ -183,14 +183,14 @@ class TrackerCard extends HTMLElement {
           card_content += updated_content;
         }
         // attach handlers only once
-        if (!this.handlers['custom_updater']) {
+        if (!this.handlers['custom_updater-main']) {
           card.querySelector('#update').addEventListener('click', event => {
             this.myhass.callService('custom_updater', 'update_all', {});
           });
           card.querySelector('#check').addEventListener('click', event => {
             this.myhass.callService('custom_updater', 'check_all', {});
           });
-          this.handlers['custom_updater'] = true;
+          this.handlers['custom_updater-main'] = true;
         }
         root.lastChild.hass = hass;
       }
@@ -198,10 +198,16 @@ class TrackerCard extends HTMLElement {
     card_content += `</tbody></table>`;
     root.getElementById('content').innerHTML = card_content;
     for (var i in pending_updates) {
-      card.querySelector('#' + pending_updates[i][0]).addEventListener('click', event => {
-        this.myhass.callService('custom_updater', 'install', {'element': pending_updates[i][0]});
-        this.myhass.callService('custom_updater', 'check_all', {});
-      });
+      if (!this.handlers['custom_updater-' + pending_updates[i][0]]) {
+        if (card.querySelector('#' + pending_updates[i][0])) {
+          console.info(`%c '${pending_updates[i][0]}' has an update pending`, "color: green; font-weight: bold", "");
+          card.querySelector('#' + pending_updates[i][0]).addEventListener('click', event => {
+            this.myhass.callService('custom_updater', 'install', {'element': pending_updates[i][0]});
+            this.myhass.callService('custom_updater', 'check_all', {});
+          });
+          this.handlers['custom_updater-' + pending_updates[i][0]] = true
+        }
+      }
     }
 
   }
