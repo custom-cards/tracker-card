@@ -1,3 +1,7 @@
+## 1.2.6
+
+- Revert stupidity _note to self, stop trying to do UI stuff..._
+
 ## 1.2.5
 
 - Fix eventlisteners for "new" updates

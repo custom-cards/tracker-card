@@ -87,12 +87,6 @@ class TrackerCard extends HTMLElement {
           .update_pending {
             
           }
-          .hidden-button {
-            padding: 0px;
-            border: 0px;
-            background: none;
-            color: var(--primary-text-color);
-          }
         `;
     content.innerHTML = `
       <div id='content'>
@@ -133,10 +127,6 @@ class TrackerCard extends HTMLElement {
         const domain = hass.states[tracker].attributes.domain;
         const repo = hass.states[tracker].attributes.repo;
 
-        for (var i in list) {
-          all_elements.push(list[i][0])
-        }
-
         card_content += `
           <tr><td colspan='3' class='separator'>${domain.replace('_', ' ')}:</td></tr>
         `;
@@ -153,11 +143,9 @@ class TrackerCard extends HTMLElement {
                   <td class='local'>
                     ${elem[1].local?elem[1].local:'n/a'}
                   </td>
-                  <td class='remote'>
+                  <td class='remote' style="font-weight: 700; color: red;">
                     <div>
-                      <button title="Update this" class='hidden-button' id='${elem[0]}' style="font-weight: 700; color: red;">
-                        ${elem[1].remote?elem[1].remote:'n/a'}
-                      </button>
+                      ${elem[1].remote?elem[1].remote:'n/a'}
                     </div>
                   </td>
             `:`
@@ -172,9 +160,7 @@ class TrackerCard extends HTMLElement {
                   </td>
                   <td class='remote'>
                     <div>
-                      <button class='hidden-button' id='${elem[0]}' disabled>
-                        ${elem[1].remote?elem[1].remote:'n/a'}
-                      </button>
+                      ${elem[1].remote?elem[1].remote:'n/a'}
                     </div>
                   </td>
             `}`
@@ -198,19 +184,6 @@ class TrackerCard extends HTMLElement {
     });
     card_content += `</tbody></table>`;
     root.getElementById('content').innerHTML = card_content;
-    for (var elem in all_elements) {
-      var element = all_elements[elem];
-      if (!this.handlers[`custom_updater-${element}`]) {
-        if (card.querySelector(`#${element}`)) {
-          console.debug(`addEventListener registerd for ${element}`);
-          card.querySelector(`#${element}`).addEventListener('click', event => {
-            this.myhass.callService('custom_updater', 'install', {'element': element});
-            this.myhass.callService('custom_updater', 'check_all', {});
-          });
-          this.handlers[`custom_updater-${element}`] = true
-        }
-      }
-    }
   }
   getCardSize() {
     return 1;
