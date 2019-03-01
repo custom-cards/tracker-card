@@ -38,6 +38,8 @@ resources:
 type: custom:tracker-card
 ```
 
+__[Tracking of cards must be enabled before you can do this.](https://github.com/custom-components/custom_updater/wiki/Installation#configuration-option-track)._
+
 ### Installation demo
 
 ![demo](files/tracker-card.gif)
